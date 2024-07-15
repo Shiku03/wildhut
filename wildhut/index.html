@@ -1,25 +1,54 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildhut International</title>
 </head>
 <body>
-    <section class="navbar">
-        <span>
-            <h1>Logo</h1>
-        </span>
+    
+   <div class="video-container">
+    
+        <video   autoplay muted loop  id="back-video">
+            <source src="3 elephants video.webm" type="video/webm">
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="navbar">
+            <span>
+                <h1>Logo</h1>
+            </span>
+            
+            
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Book today</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
         
-        
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        
-    </section>
 
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UyxqIQhbfZE?si=kSReaS6qDX079Ogj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen controls=0></iframe>
+       
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var video=document.getElementById('back-video');
+            var source= video.getElementsByTagName('source')[0];
+            var videoList= ['3 elephants video.webm', 'giraffe.webm',];
+            var currentVideoIndex=0;
+            var limitTime=10;
+
+            video.addEventListener('timeupdate', function(){
+                if(currentTime >=limitTime){
+                    currentVideoIndex= (currentVideoIndex+1) %videoList.length;
+                    source.setAttribute('src', videoList[currentVideoIndex]);
+                    video.load();
+                    video.play();
+                }
+            })
+            
+        })
+    </script>
 
 
 </body>
