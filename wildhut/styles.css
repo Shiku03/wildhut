@@ -1,4 +1,4 @@
-body{
+body,html{
     margin:0;
     padding:0;
 }
@@ -58,7 +58,51 @@ body{
 .navbar ul li a{
     text-decoration: none;
     color:black;
+    font-family:"Nanto Serif";
 }
 .navbar ul li a:hover{
     color:white;
+}
+
+img{
+    object-fit:cover;
+    position: relative;
+    margin:0;
+    z-index:-1;
+}
+.image-overlay{
+    width:100%;
+    height:200px;
+    background-image: linear-gradient( rgba(30,30,30,0.4),  rgba(190, 18, 18, 0.4));
+    position:absolute;
+    z-index:1;
+
+}
+.image-container{
+    width:100%;
+    height:200px;
+    display:flex;
+    position: relative;
+    top:0;
+    left:0;
+}
+#about .image-container h1{
+    position: absolute;
+    font-size:4rem;
+    font-family:"Nunito Sans";
+    text-align:center;
+    color:white;
+    text-align:center;
+    z-index:2;
+}
+.content{
+    background-color: cadetblue;
+    
+    padding-top:40px;
+}
+p{
+    font-family:"Nanto Serif";
+    text-align:center;
+    font-size:1.2rem;
+
 }
