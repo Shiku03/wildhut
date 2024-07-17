@@ -43,25 +43,7 @@
         </div>
        
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var video=document.getElementById('back-video');
-            var source= video.getElementsByTagName('source')[0];
-            var videoList= ['3 elephants video.webm', 'giraffe.webm',];
-            var currentVideoIndex=0;
-            var limitTime=10;
-
-            video.addEventListener('timeupdate', function(){
-                if(currentTime >=limitTime){
-                    currentVideoIndex= (currentVideoIndex+1) %videoList.length;
-                    source.setAttribute('src', videoList[currentVideoIndex]);
-                    video.load();
-                    video.play();
-                }
-            })
-            
-        })
-    </script>
+    
 
 
 </body>
