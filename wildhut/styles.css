@@ -106,3 +106,28 @@ p{
     font-size:1.2rem;
 
 }
+#contact-us{
+    display:flex;
+    justify-content: space-between;
+}
+.contact{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+.contact ul li, .location ul li {
+    list-style-type:none;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:12px;
+}
+.contact ul li a{
+    text-decoration: none;
+    color:black;
+}
+.contact ul li a:hover{
+    color:rgb(201, 32, 102);
+}
+footer {
+    background-color:burlywood;
+}
