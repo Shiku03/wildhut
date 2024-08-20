@@ -2,61 +2,77 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 .background-container{
-    height:100vh;
-    width:100vw;
-    position: relative;
+   min-height:100vh;
+   width:100vw;
+   background: url(images/elephants.jpg);
+   background-position: center;
+   background-size:cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+   position:relative;
 }
-.background{
-    height: 100%;
-    width:100%;
+.background-overlay{
     position: absolute;
+    left: 0;
     top:0;
+    height:100%;
+    width:100%;
+    background: linear-gradient(rgba(253, 246, 246, 0.4), rgba(8, 8, 8, 0.753));
+    z-index:1;
+}
+.title {
+    position: absolute;
     left:0;
-    z-index:-1;
+    top:0;
+    width:100vw;
+    z-index:5;
+   
+}
+.title h1{
+    font-size:3.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.title h2{
     
+    font-size:2rem;
+    font-weight: 600;
+    text-align: center;
+
 }
-.top-left .outer-box{
-    width:150px;
-    height:150px;
-    background-color:#bb3636;
+.menu{
     position: absolute;
-    top:-50px;
-    left:-50px;
-    z-index:1;
-    border-radius: 50%;
+    right:20px;
+    bottom:60px;
+    z-index:5
 }
 
-.bottom-right .outer-box{
-    width:150px;
-    height:150px;
-    background-color:#bb3636;
-    position: absolute;
-    bottom:-50px;
-    right:-50px;
-    z-index:1;
-    border-radius: 50%;
+.menu a{
+    display: block;
+    width:100%;
+    height:100%;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 230, 230);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    line-height:50px;
 }
-.home-container{
-    width:80vw;
-    height:80vh;
-    position: absolute;
-    top:10%;
-    left:10%;
-    z-index:2;
-    display: flex;
-    box-shadow: 8px 8px 10px darkgray;
+.menu ul li{
+    list-style: none;
+    border:2px solid rgb(207, 192, 192);
+    margin:20px;
+   width:150px;
+   height:50px;
+    display: block;
 }
-.home-container .left-side , .home-container .right-side {
-    width:50%;
-    height: 100%;
+.menu li:hover{
+    background-color:white;
+   
 }
-
-.home-container .right-side{
-    background-image: url(images/leafy\ background.jpg);
-    background-position: center;
-    background-size: cover;
+.menu a:hover{
+    color:black;
+ 
 }
