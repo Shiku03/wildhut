@@ -8,24 +8,26 @@
    width:100vw;
    background: url(images/elephants.jpg);
    background-position: center;
-   background-size:cover;
+   background-size:contain;
    background-repeat: no-repeat;
    overflow: hidden;
    position:relative;
 }
+
 .background-overlay{
     position: absolute;
     left: 0;
     top:0;
     height:100%;
     width:100%;
-    background: linear-gradient(rgba(253, 246, 246, 0.4), rgba(8, 8, 8, 0.753));
+    background: linear-gradient(rgba(253, 246, 246, 0.4), rgba(8, 8, 8, 0.553));
     z-index:1;
 }
+    
 .title {
     position: absolute;
     left:0;
-    top:0;
+    top:50px;
     width:100vw;
     z-index:5;
    
@@ -37,14 +39,14 @@
 }
 .title h2{
     
-    font-size:2rem;
+    font-size:1.5rem;
     font-weight: 600;
     text-align: center;
 
 }
 .menu{
     position: absolute;
-    right:20px;
+    right:250px;
     bottom:60px;
     z-index:5
 }
@@ -57,7 +59,7 @@
     text-decoration: none;
     color:rgb(255, 230, 230);
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height:50px;
 }
 .menu ul li{
